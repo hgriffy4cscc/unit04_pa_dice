@@ -14,6 +14,7 @@ class Dice():
 def main():
     """function to control die rolling"""
     die: Dice = Dice()
+    die.set_sides(20)
     print (die.roll_die())
 
 for i in range(3):
