@@ -10,12 +10,19 @@ class Dice():
 
     def roll_die(self):
         return random.randint(1,self.sides)
+    
+    def __repr__(self):
+        return f"{self.sides}-sided die"
 
-def main():
+def main(die_size):
     """function to control die rolling"""
-    die: Dice = Dice()
-    die.set_sides(20)
-    print (die.roll_die())
+    die_die_size: Dice = Dice()
+    die_die_size.set_sides(die_size)
+    print(f"10 rolls of a {die_die_size}")
+    for i in range(10):
+        print (die_die_size.roll_die())
 
-for i in range(3):
-    main()
+die_sizes: list[int] = [6, 10, 20]
+
+for die_size in die_sizes:
+    main(die_size)
