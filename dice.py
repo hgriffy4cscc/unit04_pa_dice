@@ -16,4 +16,5 @@ def main():
     die: Dice = Dice()
     print (die.roll_die())
 
-main()
+for i in range(3):
+    main()
